@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #F7F7F7;
+}
+
+/* Navigation Bar */
+.emp-reg-nav-cnf {
+  display: flex;
+  align-items: center;
+  height: 9%; /* Changed from vh to % */
+  background-color: #FFFFFF;
+  opacity: 1;
+  width: 100%;
+}
+
+#nav-header-1 {
+  font: normal normal bolder 1.8em Montserrat; /* Changed px to em */
+  letter-spacing: 0px;
+  color: #82A70C;
+  text-transform: capitalize;
+}
+
+#nav-header-2 {
+  font: normal normal bolder 1.8em Montserrat; /* Changed px to em */
+  letter-spacing: 0px;
+  color: #42515F;
+  text-transform: capitalize;
+  margin-top: -3px;
+}
+
+/* Employee Registration Field */
+#emp-reg-field-cnf {
+  position: absolute;
+  left: 22.5%;
+  top: 11%;
+  right: 22.5%;
+  height: 87%;
+  width: 55%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #F5F5F5;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+/* Employee Registration Form */
+#emp-reg-form-cnf {
+  margin-top: 7%;
+  height: 70%; /* Changed vh to % */
+  display: grid;
+  row-gap: 0px;
+}
+
+/* Each Data Section Within Form */
+.emp-reg-form-eachData-cnf {
+  display: flex;
+  align-items: center;
+  height: 11.4%; /* Changed vh to % based on desired grid layout*/
+}
+
+/* Labels */
+label {
+  font: normal normal normal 1.8em Roboto; /* Changed px to em */
+  letter-spacing: 0px;
+  color: #42515F;
+  opacity: 1;
+}
+
+/* Employee Profile Section */
+#emp-reg-profile-cnf {
+  margin-left: 6%; /* Changed px to % */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Employee Profile Image */
+#emp-reg-profile-cnf img {
+  width: 8%; /* Changed px to % */
+  height: 8%; /* Changed px to % */
+  background-color: #DEDEDE;
+  border: 1px solid #B4B4B4;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+/* Employee Gender Section */
+#emp-reg-gender-cnf {
+  margin-left: 14%; /* Changed px to % */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #42515F;
+}
