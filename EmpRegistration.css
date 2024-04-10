@@ -45,6 +45,9 @@ body {
     margin-top: -3px;
 }
 
+a {
+    text-decoration: none;
+}
 #emp-reg-field-cnf {
     position: absolute;
     left: 22.5%;    
