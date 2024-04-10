@@ -46,6 +46,86 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    let employeeData = JSON.parse(localStorage.getItem("employeeData"));
+    
+     const urlParams = new URLSearchParams(window.location.search);
+     const editName = urlParams.get('editName');
+
+     let editData = employeeData.filter(ele => editName == ele.name )
+     console.log(editData[0].name);
+     console.log(editData[0].department);
+     console.log(editData[0].date);
+    
+   
+    if(editData){
+     document.getElementById('name').value = editData[0].name
+     const profileImages = document.getElementsByName('profileImage');
+     profileImages.forEach(radioButton => {
+         if (radioButton.value === editData[0].profileImage) {
+             radioButton.checked = true;
+         }
+     });
+     const gender = document.getElementsByName('gender');
+     gender.forEach(radioButton => {
+         if (radioButton.value === editData[0].gender) {
+             radioButton.checked = true;
+         }
+     });
+     document.getElementById("salaryDetail").value = editData[0].salary
+     document.getElementById("emp-reg-noteText-cnf").value = editData[0].note
+
+     editData[0].department.forEach(departments => {
+        // console.log(departments);
+        const checkboxes = document.getElementsByName('department');
+        checkboxes.forEach(checkbox => {
+            if ( checkbox.value == departments) {
+               
+                console.log(checkbox.value);
+                checkbox.checked = true;
+            }
+        });
+    });
+
+    editData[0].department.forEach(departmentName => {
+        const checkboxes = document.querySelectorAll(`input[name*="${departmentName}"]`);
+              checkboxes.forEach(checkbox => {
+          if (checkbox) {
+            checkbox.checked = true;
+          }
+        });
+      });
+       let date = editData[0].date 
+        let dateArray = date.split('-')
+        // console.log(dateArray);
+        document.getElementById('day').value = dateArray[0]
+        document.getElementById('month').value = dateArray[1]
+        document.getElementById('year').value = dateArray[2]
+
+      
+
+
+        // let storedData = JSON.parse(localStorage.getItem("employeeData"));
+
+        // if (storedData) {
+
+        //     storedData = storedData.filter(employee => employee.name == editName);
+
+
+        //     localStorage.setItem("employeeData", JSON.stringify(storedData));
+
+        //     // localStorage.removeItem("storedData")
+
+        
+        // }
+
+ }
+});
+
+    // }
+
+    //  })
+
+document.addEventListener('DOMContentLoaded', function () {
 const cancel=document.getElementById('reg-action-cancel-cnf')
 cancel.addEventListener('click',()=>{
     window.location.href=('http://127.0.0.1:5500/EmpDashboard.html')
