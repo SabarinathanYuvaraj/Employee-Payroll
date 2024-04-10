@@ -11,10 +11,11 @@
    
     <div id="nav"><img src="assets/logo.png" alt=""><div><a href="http://127.0.0.1:5500/EmpRegistration.html"><pre id="e"> EMPLOYEE <br><div id="p"> PAYROLL</div></pre></a></div></div>
     <div id="employee">Employee Details</div>
-  <div id="head"> <input type="search"><button id="add-user"><span>+</span> <a href="http://127.0.0.1:5500/EmpRegistration.html" target="_blank"><span id="add">Add User</span></a></button></div> 
-    
+  <div id="head"><div id="head1"><input id="searchText" type="text"> <div id="head2"><input id="searchBar" type="search"> <i  id="searchCancel"  class="fa-solid fa-xmark"></i></div></div>
+    <div id="head3">  <button id="add-user"><span>+</span> <a href="http://127.0.0.1:5500/EmpRegistration.html" target="_blank"><span id="add">Add User</span></a></button></div> </div>    
     <div id="field">
         <table border="0px" style="width: 1150px; align-items: center;" cellspacing="0px">
+            <thead>
             <tr id="table-header">
                 <th style="width: 300px;">NAME</th>
                 <th>GENDER</th>
@@ -23,13 +24,16 @@
                 <th>START DATE</th>
                 <th>ACTIONS</th>
             </tr>
+        </thead>
+        <tbody></tbody>
 
           
         
-              
+
           
         </table>
     </div>
 <script src="EmpDashboard.js"></script>
+<!-- <script src="EmpRegistration.js"></script> -->
 </body>
 </html>
